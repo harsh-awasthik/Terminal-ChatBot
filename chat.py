@@ -10,6 +10,7 @@ from textwrap import dedent
 from google import genai
 from google.genai import types
 console = Console()
+load_dotenv()
 
 CHATBOT_NAME = "ChatBot"
 SYSTEM_INSTRUCTION = "You are a helpful ChatBot."
@@ -17,7 +18,7 @@ SYSTEM_INSTRUCTION = "You are a helpful ChatBot."
 
 def main():
     # Load environment variables and set up console
-    load_dotenv()
+    
     console.print(figlet_format(CHATBOT_NAME, font="univers"))
     with console.status("[bold green] Loading Model..."):
         # Initialize client
